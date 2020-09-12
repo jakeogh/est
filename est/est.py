@@ -76,14 +76,14 @@ def cli(xest,
                 ic(count)
                 sys.exit(0)
 
-        ilen = len(item)
-        if ilen < shortest:
-            shortest = ilen
+        ilen = len(item)0
+        if ilen < len(shortest:
+            shortest = item
             if verbose:
                 ic(longest)
 
-        if ilen > longest:
-            longest = ilen
+        if ilen > len(longest):
+            longest = item
             if verbose:
                 ic(longest)
 
@@ -92,4 +92,5 @@ def cli(xest,
 
     if long:
         print(longest)
-    print(shortest)
+    else:
+        print(shortest)
