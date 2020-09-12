@@ -1,0 +1,36 @@
+```
+$ ls
+total 12K
+drwxr-xr-x 2 user user 4.0K 2020-09-12 02:05:05 .
+drwxr-xr-x 4 user user 4.0K 2020-09-12 00:30:45 ..
+-rw-r--r-- 1 user user    0 2020-09-12 00:30:45 __init__.py
+-rw-r--r-- 1 user user 2.8K 2020-09-12 02:05:05 est.py
+
+$ ls | est long --verbose
+ic| est.py:56 in cli()- sys.stdout.isatty(): True
+ic| est.py:64 in cli()- 'waiting for input'
+ic| est.py:78 in cli()- index: 0, item: 'total 12K'
+ic| est.py:86 in cli()- ilen: 9
+ic| est.py:78 in cli()- index: 1, item: 'drwxr-xr-x 2 user user 4.0K 2020-09-12 02:05:05 .'
+ic| est.py:86 in cli()- ilen: 49
+ic| est.py:96 in cli()- longest: 'drwxr-xr-x 2 user user 4.0K 2020-09-12 02:05:05 .'
+ic| est.py:78 in cli()- index: 2, item: 'drwxr-xr-x 4 user user 4.0K 2020-09-12 00:30:45 ..'
+ic| est.py:86 in cli()- ilen: 50
+ic| est.py:96 in cli()- longest: 'drwxr-xr-x 4 user user 4.0K 2020-09-12 00:30:45 ..'
+ic| est.py:78 in cli()- index: 3, item: '-rw-r--r-- 1 user user    0 2020-09-12 00:30:45 __init__.py'
+ic| est.py:86 in cli()- ilen: 59
+ic| est.py:96 in cli()- longest: '-rw-r--r-- 1 user user    0 2020-09-12 00:30:45 __init__.py'
+ic| est.py:78 in cli()- index: 4, item: '-rw-r--r-- 1 user user 2.8K 2020-09-12 02:05:05 est.py'
+ic| est.py:86 in cli()- ilen: 54
+-rw-r--r-- 1 user user    0 2020-09-12 00:30:45 __init__.py
+
+$ ls | est long
+ic| est.py:64 in cli()- 'waiting for input'
+-rw-r--r-- 1 user user    0 2020-09-12 00:30:45 __init__.py
+
+$ ls | est short
+ic| est.py:64 in cli()- 'waiting for input'
+total 12K
+
+
+```
