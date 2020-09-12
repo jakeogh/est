@@ -91,5 +91,5 @@ def cli(xest,
             import IPython; IPython.embed()
 
     if long:
-        return longest
-    return shortest
+        print(longest)
+    print(shortest)
