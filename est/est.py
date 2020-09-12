@@ -63,12 +63,17 @@ def cli(xest,
     if not items:
         ic('waiting for input')
 
-    shortest = inf
-    longest = 0
+    shortest = None
+    longest = None
     for index, item in enumerate_input(iterator=items,
                                        null=null,
                                        debug=debug,
                                        verbose=verbose):
+        if not longest:
+            longest = item
+        if not shortest:
+            shortest = item
+
         if verbose:
             ic(index, item)
         if count:
@@ -77,6 +82,9 @@ def cli(xest,
                 sys.exit(0)
 
         ilen = len(item)
+        if verbose:
+            ic(ilen)
+
         if ilen < len(shortest):
             shortest = item
             if verbose:
