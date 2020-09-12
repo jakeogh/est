@@ -76,7 +76,7 @@ def cli(xest,
                 ic(count)
                 sys.exit(0)
 
-        ilen = len(item)0
+        ilen = len(item)
         if ilen < len(shortest:
             shortest = item
             if verbose:
