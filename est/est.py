@@ -17,9 +17,8 @@
 # pylint: disable=W0201     # attribute defined outside __init__
 ## pylint: disable=W0703     # catching too general exception
 
-import os
+#import os
 import sys
-from math import inf
 import click
 from icecream import ic
 from kcl.inputops import enumerate_input
@@ -29,9 +28,6 @@ ic.configureOutput(includeContext=True)
 # import IPython; IPython.embed()
 # import pdb; pdb.set_trace()
 # from pudb import set_trace; set_trace(paused=False)
-
-global APP_NAME
-APP_NAME = 'est'
 
 
 # DONT CHANGE FUNC NAME
@@ -43,7 +39,6 @@ APP_NAME = 'est'
 @click.option('--ipython', is_flag=True)
 @click.option('--count', type=str)
 @click.option("--null", is_flag=True)
-#@click.group()
 def cli(xest,
         items,
         verbose,
